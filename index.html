@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#ffffff">
+    <title>Registro de Operações</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="192x192" href="img/icon-192.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="header-images">
+            <img src="img/logo-left.png" alt="Logo Left" class="header-logo">
+            <h1><i class="fas fa-clipboard-list"></i> Registro</h1>
+            <img src="img/logo-right.png" alt="Logo Right" class="header-logo">
+        </div>
+        <form id="operationForm" autocomplete="off">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label>Operação:</label>
+                    <input type="text" class="form-control" name="operacao" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label>Data:</label>
+                    <input type="date" class="form-control" name="data" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label>Turno:</label>
+                    <select class="form-control" name="turno" required>
+                        <option value="1">1º Turno</option>
+                        <option value="2">2º Turno</option>
+                        <option value="3">3º Turno</option>
+                        <option value="4">4º Turno</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Campos de quantidade -->
+            <div class="row">
+                <div class="col-md-3 mb-3">
+                    <label>Quantidade Descarga Linha 08:</label>
+                    <input type="number" class="form-control" name="qtd_linha_08" min="0">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label>Quantidade Descarga Linha 10:</label>
+                    <input type="number" class="form-control" name="qtd_linha_10" min="0">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label>Quantidade Descarga Linha 21:</label>
+                    <input type="number" class="form-control" name="qtd_linha_21" min="0">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label>Quantidade Carregada de ME:</label>
+                    <input type="number" class="form-control" name="carregamento_me" min="0">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 mb-3">
+                    <label>Material Carregado no Saider:</label>
+                    <input type="text" class="form-control" name="material_saider">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label>Rótulo e Fornecedor L07:</label>
+                    <input type="text" class="form-control" name="rotulo_fornecedor_07">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label>Rótulo e Fornecedor L08:</label>
+                    <input type="text" class="form-control" name="rotulo_fornecedor_08">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label>Rótulo e Fornecedor L10:</label>
+                    <input type="text" class="form-control" name="rotulo_fornecedor_10">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 mb-3">
+                    <label>Rótulo e Fornecedor L21:</label>
+                    <input type="text" class="form-control" name="rotulo_fornecedor_21">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 mb-3">
+                    <label>Observações:</label>
+                    <textarea class="form-control" name="observacoes" rows="3"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 mb-3">
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        <i class="fas fa-save"></i> Salvar
+                    </button>
+                    <a href="registros.html" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-list"></i> Ver Registros
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
